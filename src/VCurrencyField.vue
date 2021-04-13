@@ -70,6 +70,7 @@ export default {
   },
   mounted() {
     this.addListeners(this.$el.querySelector('input'));
+    this.setValue(this.value);
   },
   computed: {
     attrs() {
@@ -139,12 +140,12 @@ export default {
             if (this.value != null && event.key === '-' && this.value >= 0) {
               this.setValue(this.value * -1)
             }
-            
+
             if (this.value != null && event.key === '+' && this.value <= 0) {
               this.setValue(this.value * -1)
             }
           }
-          
+
           if (keyup) {
             keyup();
           }

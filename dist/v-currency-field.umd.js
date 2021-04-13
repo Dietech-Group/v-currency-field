@@ -1,6 +1,6 @@
 /*!
  * v-currency-field v3.1.1 
- * (c) 2020 Philipe Augusto <phiny1@gmail.com>
+ * (c) 2021 Philipe Augusto <phiny1@gmail.com>
  * Released under the MIT License.
  */
 (function (global, factory) {
@@ -898,6 +898,7 @@
     },
     mounted: function mounted() {
       this.addListeners(this.$el.querySelector('input'));
+      this.setValue(this.value);
     },
     computed: {
       attrs: function attrs() {
