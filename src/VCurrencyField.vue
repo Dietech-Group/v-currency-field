@@ -93,8 +93,11 @@ export default {
       }
     },
     valueRange() {
-      if (this.min || this.max) {
-        return {min: this.min, max: this.max};
+      if (this.min != null || this.max != null) {
+        const res = {}
+        if (this.min != null) res.min = this.min;
+        if (this.max != null) res.max = this.max;
+        return res;
       } else {
         return undefined;
       }

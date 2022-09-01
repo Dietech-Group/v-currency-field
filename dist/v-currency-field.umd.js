@@ -1,6 +1,6 @@
 /*!
  * v-currency-field v3.1.1 
- * (c) 2021 Philipe Augusto <phiny1@gmail.com>
+ * (c) 2022 Philipe Augusto <phiny1@gmail.com>
  * Released under the MIT License.
  */
 (function (global, factory) {
@@ -925,11 +925,11 @@
         }
       },
       valueRange: function valueRange() {
-        if (this.min || this.max) {
-          return {
-            min: this.min,
-            max: this.max
-          };
+        if (this.min != null || this.max != null) {
+          var res = {};
+          if (this.min != null) res.min = this.min;
+          if (this.max != null) res.max = this.max;
+          return res;
         } else {
           return undefined;
         }
