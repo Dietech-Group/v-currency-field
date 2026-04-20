@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-yarn docs:build
+npm run docs:build
 
 cd docs/.vuepress/dist
 
